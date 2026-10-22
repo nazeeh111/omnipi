@@ -7,6 +7,12 @@ OmniPi is an independent, read-only web explorer for two different meanings of P
 
 The modes are separate on purpose. Mathematical π and the Pi Network blockchain are unrelated systems that share a symbol. OmniPi makes that distinction clear while giving curious people one place to explore both.
 
+## Watch OmniPi in 21 seconds
+
+[![OmniPi launch film poster showing both explorer modes](brag.jpg)](brag.mp4)
+
+[Play or download the launch film](brag.mp4). The film shows a representative digit search and a Mainnet ledger snapshot recorded on October 22, 2026; live records change continually.
+
 ## Run locally
 
 Requires Node.js 18 or newer. No package installation or API key is needed.
