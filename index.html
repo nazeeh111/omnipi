@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b34">
+  <meta name="description" content="OmniPi brings Pi Network's public ledger and 100,000 digits of mathematical π into one independent, read-only explorer.">
+  <title>OmniPi — two worlds, one symbol</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="OmniPi home"><span class="brand-mark">π</span><span>omni<span class="brand-pi">pi</span><small>THE TWO SIDES OF PI</small></span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <button type="button" data-view="math" class="nav-link active" aria-current="page">Explore π</button>
+        <button type="button" data-view="chain" class="nav-link">Pi Network</button>
+        <a href="#about" class="nav-link about-link">About</a>
+      </nav>
+      <div class="header-actions"><span class="read-only"><i></i> READ ONLY</span><button id="theme-toggle" class="icon-button" type="button" aria-label="Switch color theme" title="Switch color theme">◐</button></div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> ONE SYMBOL. TWO UNIVERSES.</div><h1 id="hero-title">Go further with <em>Pi.</em></h1><p>Find patterns in the digits of π. Follow activity on the Pi Network. One thoughtful place to explore both.</p><div class="hero-actions"><button type="button" class="primary-button" data-view="math">Explore the digits <span aria-hidden="true">↗</span></button><button type="button" class="text-button" data-view="chain">View the blockchain <span aria-hidden="true">→</span></button></div></div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="art-pi">π</div><span class="art-label label-one">3.1415926535</span><span class="art-label label-two">LEDGER · LIVE</span><span class="art-label label-three">∞ POSSIBILITIES</span></div>
+      </section>
+
+      <div class="section-top"><div><span class="section-index">01 / EXPLORE</span><h2>Choose your lens</h2></div><p>Precise answers, grounded in real data.</p></div>
+      <div class="lens-tabs" role="tablist" aria-label="Explorer mode"><button id="math-tab" type="button" role="tab" aria-selected="true" aria-controls="math-panel" data-view="math"><span class="lens-symbol">π</span><span><strong>Mathematical Pi</strong><small>Search the decimal universe</small></span><span class="lens-arrow">↗</span></button><button id="chain-tab" type="button" role="tab" aria-selected="false" aria-controls="chain-panel" data-view="chain"><span class="lens-symbol chain-symbol">⛓</span><span><strong>Pi Network</strong><small>Explore public chain activity</small></span><span class="lens-arrow">↗</span></button></div>
+
+      <section id="math-panel" role="tabpanel" aria-labelledby="math-tab" class="workspace">
+        <div class="workspace-heading"><div><span class="mini-label">THE DECIMAL UNIVERSE</span><h2>What will you find in π?</h2><p>Search the first 100,000 decimal digits, right here in your browser.</p></div><span class="source-pill"><i></i> LOCAL DATASET</span></div>
+        <div class="math-layout"><div class="search-card"><div class="card-head"><span class="card-icon">⌕</span><div><h3>Search π</h3><p>Find a sequence, encode a word, or jump to a position.</p></div></div><div class="mode-row" role="group" aria-label="Pi search type"><button type="button" class="mode active" data-mode="sequence" aria-pressed="true">Digits</button><button type="button" class="mode" data-mode="word" aria-pressed="false">Word to digits</button><button type="button" class="mode" data-mode="position" aria-pressed="false">Position</button></div><form id="math-form"><label id="math-label" for="math-input">Digit sequence</label><div class="input-row"><input id="math-input" autocomplete="off" spellcheck="false" inputmode="numeric" maxlength="20" placeholder="Try 14159 or your birthday"><button class="search-button" type="submit">Search <span aria-hidden="true">→</span></button></div><p id="math-hint" class="field-hint">1–20 digits. Positions start immediately after the decimal point.</p></form><div id="math-result" class="result" role="status" aria-live="polite"><span class="result-empty">Try <button type="button" class="example" data-example="14159">14159</button> or switch to Word to digits.</span></div></div><aside class="info-card"><div class="info-card-top"><span>THE DIGIT FILE</span><span>001—100,000</span></div><div class="big-pi">3.1415926535<span>8979323846…</span></div><div class="info-rule"></div><div class="info-stat"><strong>100,000</strong><span>computed decimal places in this edition</span></div><p>Searches run locally. Your words and numbers stay in your browser.</p></aside></div>
+        <div class="viewer"><div class="viewer-heading"><div><span class="mini-label">DIGIT VIEWER</span><h3>A window into π</h3></div><span id="viewer-range">Digits 1–120</span></div><div id="digit-view" class="digit-view" aria-label="Digits of pi">Loading digits…</div><div class="viewer-foot"><span><b class="legend-dot"></b> Highlighted match</span><span>Position 1 is the first digit after the decimal point</span></div></div>
+      </section>
+
+      <section id="chain-panel" role="tabpanel" aria-labelledby="chain-tab" class="workspace" hidden>
+        <div class="workspace-heading"><div><span class="mini-label">THE PUBLIC LEDGER</span><h2>See the Pi Network clearly.</h2><p>Browse recent ledgers and transactions, or look up a public record.</p></div><span class="source-pill live-pill"><i></i> PUBLIC HORIZON API</span></div>
+        <div class="network-bar"><div><span class="network-dot"></span><strong id="network-name">Mainnet</strong><span id="network-status">Connecting to public ledger…</span></div><label for="network-select">Network <select id="network-select"><option value="mainnet">Mainnet</option><option value="testnet">Testnet</option></select></label></div>
+        <div class="chain-search search-card"><div class="card-head"><span class="card-icon">⌕</span><div><h3>Look up a record</h3><p>Account address, transaction hash, or ledger number.</p></div></div><form id="chain-form"><label for="chain-input">Public identifier</label><div class="input-row"><input id="chain-input" autocomplete="off" spellcheck="false" placeholder="Paste a public address, hash, or ledger number"><button class="search-button" type="submit">Look up <span aria-hidden="true">→</span></button></div><p class="field-hint">Read only. Never paste a wallet secret or passphrase.</p></form><div id="chain-result" class="chain-result" aria-live="polite" hidden></div></div>
+        <div class="chain-columns"><div class="data-card"><div class="data-card-heading"><div><span class="mini-label">FRESHLY CLOSED</span><h3>Recent ledgers</h3></div><button id="refresh" type="button" class="refresh-button" aria-label="Refresh ledger data">↻ <span>Refresh</span></button></div><div id="ledger-list" class="record-list"><p class="loading">Loading live ledgers…</p></div></div><div class="data-card"><div class="data-card-heading"><div><span class="mini-label">ON THE NETWORK</span><h3>Recent transactions</h3></div></div><div id="tx-list" class="record-list"><p class="loading">Loading live transactions…</p></div></div></div>
+        <p class="chain-note">Data comes directly from the selected Pi Network Horizon endpoint. Network availability and browser access may vary. OmniPi never asks you to connect a wallet.</p>
+      </section>
+
+      <section id="about" class="about-section"><div><span class="section-index">02 / WHY OMNIPI</span><h2>Curiosity deserves<br><em>better tools.</em></h2></div><div class="about-grid"><article><span class="about-number">01</span><h3>Know the scope</h3><p>Digit results cover a disclosed local range. Blockchain results show their live source and network.</p></article><article><span class="about-number">02</span><h3>Stay in control</h3><p>No account, tracking script, paid API, or wallet connection. Explore public information freely.</p></article><article><span class="about-number">03</span><h3>Follow the evidence</h3><p>Open blockchain records at their public API source. Check a digit result in its surrounding context.</p></article></div></section>
+    </main>
+    <footer><a class="footer-brand" href="#home">π <strong>omni<span>pi</span></strong></a><span>Independent explorer. Not affiliated with Pi Network or Explore Pi.</span><a href="https://github.com/pi-apps/pi-explorer" target="_blank" rel="noopener noreferrer">Original explorer ↗</a></footer>
+  </div>
+</body>
+</html>
