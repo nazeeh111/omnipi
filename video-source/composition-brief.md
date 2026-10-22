@@ -1,0 +1,3 @@
+# HyperFrames composition brief: OmniPi
+
+Create a 21 second, 1920x1080 polished launch film in `composition/`, rendered to `brag.mp4`. The source is the OmniPi app in this repository. Show the actual working interaction: 14159 → Digit 1, and Mainnet recent ledger records. Use the site's navy #101b34, gold #d9bd83, blue #4568d9, pale #f7f8fc. Readable, restrained type; gold π is the visual hook. Use a generated original music bed and sparse soft accents; no voice or third-party track. End with `github.com/nazeeh111/omnipi`. Follow `brag-plan.md` for timing and scene content. Avoid claims of affiliation, wallet access, or infinite digit coverage. Use local HyperFrames lint, check, render and FFmpeg verification.

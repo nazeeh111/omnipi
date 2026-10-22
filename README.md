@@ -15,6 +15,8 @@ The modes are separate on purpose. Mathematical π and the Pi Network blockchain
 
 [Play or download the launch film](brag.mp4). The film shows a representative digit search and a Mainnet ledger snapshot recorded on October 22, 2026; live records change continually.
 
+[Film source and original soundtrack generator](video-source/README.md) are included for reuse.
+
 ## Run locally
 
 Requires Node.js 18 or newer. No package installation or API key is needed.
