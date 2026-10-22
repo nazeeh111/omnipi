@@ -8,4 +8,6 @@ OmniPi ships the first 1,000,000 digits **after** the decimal point in `data/pi-
 - Output SHA-256: `146e73fb1076ed23827cd8c6dedb70a7d5de8126aa29c643f5e59d489aa4f4fa`.
 - Cross-check: the first 100,000 decimal digits match `data/pi-100000.txt`, independently calculated with `scripts/generate_pi.py` using Chudnovsky binary splitting.
 
+To reproduce the transformation after obtaining the CSV, run `python3 scripts/prepare_pi_dataset.py pi_digits.csv /path/to/new-output.txt`. It refuses to overwrite an existing output.
+
 These checks establish the file structure and a substantial prefix match. They do not independently prove every remaining digit against a second million-digit calculation.
