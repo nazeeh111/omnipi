@@ -1,5 +1,7 @@
 # OmniPi
 
+**Live app:** [Open OmniPi](https://nazeeh111.github.io/omnipi/)
+
 OmniPi is an independent, read-only web explorer for two different meanings of Pi:
 
 - **π:** search the first 100,000 decimal digits by sequence, English word (phone keypad encoding), or one-based position. The dataset is bundled and searched locally.
