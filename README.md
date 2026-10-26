@@ -40,7 +40,7 @@ The Pi Network view makes browser requests directly to `https://api.mainnet.mine
 - The million-digit file comes from [TidyTuesday's Pi dataset](https://github.com/rfordatascience/tidytuesday/tree/main/data/2026/2026-03-24). We checked its row positions, digit characters, length, and first 100,000 digits against an independent Chudnovsky calculation. It covers exactly 1,000,000 digits **after** the decimal point; an absent sequence might occur later. See [DATA_SOURCE.md](DATA_SOURCE.md).
 - Word search supports English A–Z and converts letters to digits on a telephone keypad. It does not search literal text in π.
 - Blockchain data is live and read only. It is not a financial service, wallet, trading tool, or independently operated node. A live endpoint may return incomplete or delayed data.
-- [pi-apps/pi-explorer](https://github.com/pi-apps/pi-explorer) (Apache 2.0) informed the ledger features and public Horizon model. [Explore Pi](https://www.explorepi.org/) informed the π search modes. OmniPi is an independent implementation and is not affiliated with either project or the Pi Network Core Team.
+- OmniPi is an independent implementation and is not affiliated with the Pi Network Core Team.
 
 ## License
 

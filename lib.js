@@ -20,13 +20,15 @@ export function searchPi(digits, mode, raw) {
   if (!/^[0-9]{1,20}$/.test(query)) throw new Error('Enter 1–20 digits (0–9).');
   const positions = [];
   let from = 0;
+  let total = 0;
   while (from <= digits.length - query.length) {
     const found = digits.indexOf(query, from);
     if (found < 0) break;
-    positions.push(found + 1);
+    if (positions.length < 100) positions.push(found + 1);
+    total += 1;
     from = found + 1;
   }
-  return {query, positions:positions.slice(0,100), total:positions.length, position:positions[0] || null};
+  return {query, positions, total, position:positions[0] || null};
 }
 
 export function classifyChainQuery(raw) {
